@@ -11,14 +11,6 @@ const BOOKING_URL = `${BASE_URL}/dashboard/new-booking`;
 // ---------------------------------------------------------------------------
 // Login helper (needed to reach the form)
 // ---------------------------------------------------------------------------
-// async function login(page) {
-//   await page.goto(`${BASE_URL}/login`);
-//   await page.getByTestId('login-email').fill('jyotiprakash.behera@avihs.ai');
-//   await page.getByTestId('login-password').fill('LightOfJyoti67!');
-//   await page.getByTestId('login-submit').click();
-//   // await page.waitForURL(`${BASE_URL}/dashboard`);
-//   await page.getByTestId('tab-new-booking').waitFor({ state: 'visible', timeout: 60000 });
-// }
 async function login(page) {
   await page.goto(`${BASE_URL}/login`);
   await page.getByTestId('login-email').fill(process.env.EMAIL_ID);
